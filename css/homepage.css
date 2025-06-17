@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+}
+
+body {
+  background: #000;
+  color: white;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.background {
+  background: url('../images/background.png') no-repeat center center / cover;
+  width: 130%;
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  filter: blur(5px) brightness(0.5);
+  animation: slideBackground 30s linear infinite;
+  transition: filter 0.1s linear;
+}
+
+@keyframes slideBackground {
+  0% { background-position: 50% 50%; }
+  50% { background-position: 53% 47%; }
+  100% { background-position: 50% 50%; }
+}
+
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
+  padding: 20px;
+  color: white;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  width: 400px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.pfp {
+  width: 100px;
+  height: 100px;
+  border-radius: 999px;
+  border: 3px solid #fff;
+  margin-bottom: 10px;
+}
+
+.socials {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.socials button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.3s;
+}
+
+.socials button:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+.socials img {
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+
+.discord-card {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 10px 15px;
+}
+
+.mini-pfp {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.discord-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.discord-info .tag {
+  font-weight: bold;
+}
+
+.discord-info button {
+  padding: 6px 12px;
+  background: #5865F2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.music-player {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 10px;
+  border-radius: 12px;
+  text-align: center;
+  color: white;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.track-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#progress {
+  width: 60%;
+}
+
+.player-buttons img {
+  cursor: pointer;
+  filter: drop-shadow(0 0 4px cyan);
+  transition: transform 0.2s ease;
+}
+
+.player-buttons img:hover {
+  transform: scale(1.1);
+}

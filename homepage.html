@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yukaze's website</title>
+  <link rel="stylesheet" href="css/homepage.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+  #overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.85);
+    color: #fff;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 9999;
+    user-select: none;
+
+    
+    opacity: 1;
+    transition: opacity 1s ease;
+  }
+
+  #overlay.fade-out {
+    opacity: 0;
+  }
+
+  main.card, .background, .music-player {
+    display: none;
+  }
+</style>
+
+</head>
+<body>
+  <!-- 遮罩層 -->
+  <div id="overlay">Click it ♪</div>
+
+  <div class="background"></div>
+
+  <main class="card">
+    <img class="pfp" src="images/pfp.png" alt="Profile Picture" />
+    <h1>Yukaze</h1>
+
+    
+
+    <div class="discord-card">
+      <img src="https://cdn.discordapp.com/avatars/637840791594598410/584d606c6d209908fcb14c09443eec6f?size=1024" class="mini-pfp" />
+      <div class="discord-info">
+        <div class="tag">@zerotheyukaze</div>
+        <button class="button" id="discordbt" onclick="dtd()">Add on Discord</button>
+      </div>
+    </div>
+    <div class="discord-card">
+      <img src="https://cdn.discordapp.com/avatars/1051501136256962570/8129fff896bbbe21796488dbdd8ea791?size=1024" class="mini-pfp" />
+      <div class="discord-info">
+        <div class="tag">@yukaze0</div>
+        <button class="button" id="discordbt" onclick="dtd()">Add on Discord</button>
+      </div>
+    </div>
+
+    <audio id="audio" controls hidden></audio>
+
+<div class="music-player">
+  <div id="track-title" class="track-title"></div>
+
+  <div class="controls">
+    <button id="prev-btn">⏮️</button>
+    <button id="play-btn">▶️</button>
+    <button id="next-btn">⏭️</button>
+  </div>
+</div>
+
+
+    <div class="socials">
+  <button onclick="openInNewTab('https://www.youtube.com/@Zerotheyukaze')">
+    <img src="images/youtube.png" width="50" alt="YouTube" />
+  </button>
+  <button onclick="openInNewTab('https://www.instagram.com/touhou_biker/')">
+    <img src="images/Koishigram.png" width="50" alt="bikeInstagram" />
+  </button>
+  <button onclick="openInNewTab('https://www.instagram.com/zerotheyukaze/')">
+    <img src="images/Instagram_icon.png.webp" width="50" alt="Instagram" />
+  </button>
+  <button onclick="openInNewTab('https://steamcommunity.com/profiles/76561199052059354/')">
+    <img src="images/Steam_icon_logo.svg.png" width="50" alt="steam" />
+  </button>
+  <button onclick="openInNewTab('https://open.spotify.com/user/ab405ihoz05652jj57e3r6bwb?si=86490de4002b40c7')">
+    <img src="images/Spotify_icon.svg.png" width="50" alt="Spotify" />
+  </button>
+</div>
+
+  </main>
+    
+  <audio id="audio" src="sounds/iamsohappy.mp3" crossorigin="anonymous"></audio>
+  <script src="JavaScript/homepage.js"></script>
+</body>
+</html>
