@@ -77,15 +77,15 @@ const nextBtn = document.getElementById('next-btn');
 const playlist = [
   {
     title: "Ryu☆ - I'm so Happy",
-    src: "../sounds/iamsohappy.mp3"
+    src: "/sounds/iamsohappy.mp3"
   },
   {
     title: "StoryFell - Vehement",
-    src: "../sounds/Vehement.mp3"
+    src: "/sounds/Vehement.mp3"
   },
   {
     title: "wotaku - snooze feat. SHIKI",
-    src: "../sounds/snooze.mp3"
+    src: "/sounds/snooze.mp3"
   },
   // 👇 想再加歌，只要加物件進來就好
   // {
