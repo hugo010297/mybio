@@ -105,9 +105,16 @@ let currentTrack = 0;
 // 🎶 播放當前歌曲
 function loadTrack(index) {
   const track = playlist[index];
+
+  const wasPlaying = !audio.paused;  // 記住之前是不是在播放
+
   audio.src = track.src;
   trackTitle.textContent = track.title;
-  playBtn.textContent = '▶️';
+
+  if (wasPlaying) {
+    audio.play();  // 如果原本在播，就繼續播
+    playBtn.textContent = '⏸️';
+  }
 }
 
 loadTrack(currentTrack);
