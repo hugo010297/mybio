@@ -76,10 +76,6 @@ const nextBtn = document.getElementById('next-btn');
 // 🪄 歌單（你可以自由加歌）
 const playlist = [
   {
-    title: "Ryu☆ - I'm so Happy",
-    src: "sounds/iamsohappy.mp3"
-  },
-  {
     title: "StoryFell - Vehement",
     src: "sounds/Vehement.mp3"
   },
@@ -87,6 +83,11 @@ const playlist = [
     title: "wotaku - snooze feat. SHIKI",
     src: "sounds/snooze.mp3"
   },
+  {
+    title: "Ryu☆ - I'm so Happy",
+    src: "sounds/iamsohappy.mp3"
+  },
+  
   // 👇 想再加歌，只要加物件進來就好
   // {
   //   title: "新歌名",
