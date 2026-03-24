@@ -101,8 +101,7 @@ function loadTrack(index) {
   const track = playlist[index];
   audio.src = track.src;
   trackTitle.textContent = track.title;
-  audio.play();
-  playBtn.textContent = '⏸️';
+  playBtn.textContent = '▶️';
 }
 
 loadTrack(currentTrack);
