@@ -76,6 +76,10 @@ const nextBtn = document.getElementById('next-btn');
 // 🪄 歌單（你可以自由加歌）
 const playlist = [
   {
+    title: "Mili - Iron Lotus",
+    src: "sounds/Iron_Lotus.mp3"
+  },
+  {
     title: "StoryFell - Vehement",
     src: "sounds/Vehement.mp3"
   },
@@ -87,10 +91,7 @@ const playlist = [
     title: "Ryu☆ - I'm so Happy",
     src: "sounds/iamsohappy.mp3"
   },
-  {
-    title: "Mili - Iron Lotus",
-    src: "sounds/Iron_Lotus.mp3"
-  },
+  
   
   // 👇 想再加歌，只要加物件進來就好
   // {
