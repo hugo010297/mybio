@@ -87,6 +87,10 @@ const playlist = [
     title: "Ryu☆ - I'm so Happy",
     src: "sounds/iamsohappy.mp3"
   },
+  {
+    title: "Mili - Iron Lotus",
+    src: "sounds/Iron_Lotus.mp3"
+  },
   
   // 👇 想再加歌，只要加物件進來就好
   // {
