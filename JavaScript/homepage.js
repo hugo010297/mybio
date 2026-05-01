@@ -76,8 +76,8 @@ const nextBtn = document.getElementById('next-btn');
 // 🪄 歌單（你可以自由加歌）
 const playlist = [
   {
-    title: "Mili - Iron Lotus",
-    src: "sounds/Iron_Lotus.mp3"
+    title: "Vs Yukaze ;D",
+    src: "sounds/Vs_Frisk.mp3"
   },
   {
     title: "StoryFell - Vehement",
@@ -88,11 +88,25 @@ const playlist = [
     src: "sounds/snooze.mp3"
   },
   {
+    title: "PSYQUI - C & B (feat. Such)",
+    src: "sounds/CandB.mp3"
+  },
+  {
+    title: "vally.exe - String_Theory",
+    src: "sounds/String_Theory.mp3"
+  },
+  {
+    title: "Mili - Iron Lotus",
+    src: "sounds/Iron_Lotus.mp3"
+  },
+  {
+    title: "Kibo - Strength of will",
+    src: "sounds/StrenghtofWill.mp3"
+  },
+  {
     title: "Ryu☆ - I'm so Happy",
     src: "sounds/iamsohappy.mp3"
   },
-  
-  
   // 👇 想再加歌，只要加物件進來就好
   // {
   //   title: "新歌名",
