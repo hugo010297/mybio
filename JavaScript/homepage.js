@@ -45,7 +45,7 @@ function animateBackground() {
   const average = sum / bufferLength;
   const brightness = 0.1 + (average / 64) * 0.7;
 
-  background.style.filter = `blur(5px) brightness(${brightness})`;
+  background.style.filter = `blur(3px) brightness(${brightness})`;
   background.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
 }
 animateBackground();
