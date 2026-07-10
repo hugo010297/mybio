@@ -7,10 +7,10 @@ const mainCard = document.querySelector('main.card');
 const musicPlayer = document.querySelector('.music-player');
 const discordbutton = document.querySelectorAll('discordbt')
 if (!(audio instanceof HTMLMediaElement)) {
-  console.error("audio 不是 HTMLMediaElement");
+  console.error("audio not HTMLMediaElement");
 }
 
-// 媒體元素來源分析器
+// media analyzerat here
 const source = audioCtx.createMediaElementSource(audio);
 const analyser = audioCtx.createAnalyser();
 
@@ -21,7 +21,6 @@ analyser.fftSize = 256;
 const bufferLength = analyser.frequencyBinCount;
 const dataArray = new Uint8Array(bufferLength);
 
-// 滑鼠視差參數
 let mouseX = 0;
 let mouseY = 0;
 
@@ -33,7 +32,7 @@ document.addEventListener('mousemove', (e) => {
   mouseY = (e.clientY - centerY) * 0.01;
 });
 
-// 背景動畫
+//BGanimation
 function animateBackground() {
   requestAnimationFrame(animateBackground);
 
@@ -50,12 +49,12 @@ function animateBackground() {
 }
 animateBackground();
 
-// 點擊遮罩啟動音樂
+// overlay music check
 overlay.addEventListener('click', () => {
   audioCtx.resume().then(() => {
     audio.play();
 
-    // 淡出效果class
+    // i am fade
     overlay.classList.add('fade-out');
 
     setTimeout(() => {
@@ -73,7 +72,7 @@ const playBtn = document.getElementById('play-btn');
 const prevBtn = document.getElementById('prev-btn');
 const nextBtn = document.getElementById('next-btn');
 
-// 🪄 歌單（你可以自由加歌）
+// PLAYLIST OH MY GOD
 const playlist = [
   {
     title: "Vs Yukaze ;D",
@@ -107,33 +106,33 @@ const playlist = [
     title: "Ryu☆ - I'm so Happy",
     src: "sounds/iamsohappy.mp3"
   },
-  // 👇 想再加歌，只要加物件進來就好
+  // 
   // {
-  //   title: "新歌名",
+  //   title: "new song",
   //   src: "sounds/xxx.mp3"
-  // }
+  // },
 ];
 
 let currentTrack = 0;
 
-// 🎶 播放當前歌曲
+// track play
 function loadTrack(index) {
   const track = playlist[index];
 
-  const wasPlaying = !audio.paused;  // 記住之前是不是在播放
+  const wasPlaying = !audio.paused;  
 
   audio.src = track.src;
   trackTitle.textContent = track.title;
 
   if (wasPlaying) {
-    audio.play();  // 如果原本在播，就繼續播
+    audio.play(); 
     playBtn.textContent = '⏸️';
   }
 }
 
 loadTrack(currentTrack);
 
-// ▶️/⏸️ 播放/暫停
+// ▶️/⏸️ 
 playBtn.addEventListener('click', () => {
   if (audio.paused) {
     audio.play();
@@ -144,19 +143,19 @@ playBtn.addEventListener('click', () => {
   }
 });
 
-// ⏭️ 下一首
+// ⏭️ 
 nextBtn.addEventListener('click', () => {
   currentTrack = (currentTrack + 1) % playlist.length;
   loadTrack(currentTrack);
 });
 
-// ⏮️ 上一首
+// ⏮️ 
 prevBtn.addEventListener('click', () => {
   currentTrack = (currentTrack - 1 + playlist.length) % playlist.length;
   loadTrack(currentTrack);
 });
 
-// 🪄 自動播下一首
+// auto looper
 audio.addEventListener('ended', () => {
   nextBtn.click();
 });
